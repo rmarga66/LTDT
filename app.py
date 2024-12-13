@@ -20,6 +20,7 @@ def send_email(subject, body, to_email):
 
 # Titre et description de l'application
 st.set_page_config(page_title="La Taula Del Temps", page_icon="⛅", layout="centered")
+st.image("logo.png", caption="La Taula Del Temps", use_container_width=True)
 st.title("La Taula Del Temps")
 st.subheader("Demande d'invitation")
 
@@ -81,12 +82,13 @@ def apply_custom_styles():
             color: black;
             border: 2px solid #4CAF50;
         }
+        .stApp {
+            background: linear-gradient(to bottom right, #ff9800, #4caf50);
+            color: white;
+        }
         </style>
         """,
         unsafe_allow_html=True
     )
 
 apply_custom_styles()
-
-# Logo (ajoutez un fichier logo.png dans le même dossier et utilisez ce code)
-st.image("logo.png", caption="La Taula Del Temps", use_column_width=True)
